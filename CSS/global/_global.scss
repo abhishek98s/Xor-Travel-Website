@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  // border: 1px solid green;
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+input {
+  border: none;
+  line-height: 30px;
+  height: 100%;
+  outline: none;
+  color: white;
+
+  &::-webkit-input-placeholder {
+    color: white;
+    vertical-align: middle;
+  }
+}
+
+button {
+  border: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
+
+// Custom Utility Class
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+}
+
+.height_100 {
+  height: 100vh;
+}
+
+// $side_margin: 98px;
+$horizontal_margin: 7.12%;
+$vertical_margin: 4.68%;
+
+
+// Design System Code
+
+.display_Medium {
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 120%;
+}
+
+.title_Large {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.title_Medium {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+
+.headline_Large{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 120%;
+
+  @media screen and (min-width: 300px) {
+    font-size: 25px;
+  }
+  
+  @media screen and (min-width: 500px) {
+    font-size: 25px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 32px;
+  }
+}
+
+
+
+.body_Large {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.body_Medium {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.body_bold {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.body_Small {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+// Colors
+$grey_darker: #1c1c1c;
+$grey_light: #E5E5E5;
+
+
+
+
+
+//Carasol 
+// gradient
+$gradient: linear-gradient(
+  180deg,
+  rgba(0, 0, 0, 0.12) 47.77%,
+  rgba(0, 0, 0, 0.6) 74.15%,
+  rgba(0, 0, 0, 0.56) 100%
+);
+
+
+//Carasol button
+.slick-prev:before {
+  content: "<";
+  background: black;
+  border-radius: 15px;
+  fill: black;
+  border: 1px solid black;
+}
+
+.slick-next:before {
+  content: ">";
+  background: black;
+  border-radius: 15px;
+  fill: black;
+  border: 1px solid black;
+}

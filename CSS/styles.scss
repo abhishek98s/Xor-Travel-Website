@@ -1,0 +1,561 @@
+@import "./global/global";
+
+nav {
+  height: 3.5em;
+  padding: 0 $horizontal_margin;
+  background: rgba(0, 0, 0, 0.095);
+  overflow-y: visible;
+  z-index: 1;
+
+  h1 {
+    font-size: 2.1em;
+    margin: 0;
+  }
+
+  .navigation {
+    list-style-type: none;
+    list-style: none;
+    width: 29.3em;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    @media screen and (max-width: 1250px) {
+      visibility: hidden;
+    }
+
+    li {
+      cursor: pointer;
+    }
+  }
+
+  .nav-search-button {
+    width: 18em;
+
+    @media screen and (max-width: 1250px) {
+      display: none !important;
+    }
+
+    .search {
+      height: 100%;
+      width: 11.25em;
+      border-radius: 15px;
+
+      input {
+        height: 2em;
+        width: 100%;
+        border-radius: 15px 0 0 15px;
+        border: none;
+        padding: 0 0 0 14px;
+        background: #00000033;
+
+        &::placeholder {
+          color: white;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+
+      button {
+        width: 37px;
+        background-color: $grey_darker;
+        border-radius: 0 15px 15px 0;
+        display: flex;
+
+        img {
+          margin: auto;
+          width: 17px;
+          height: 17px;
+        }
+      }
+    }
+
+    .button {
+      width: 87px;
+      height: 32px;
+      border-radius: 5px;
+      background-color: $grey_darker;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+
+  .menu {
+    @media screen and (min-width: 1250px) {
+      display: none;
+    }
+  }
+
+  //Mobile navbar
+
+  .mobile_nav_box_none {
+    visibility: hidden;
+  }
+
+  .mobile_nav_box {
+    position: fixed;
+    top: 0;
+    width: 250px;
+    background-color: $grey_darker;
+    padding: 16px;
+    left: calc(100% - 250px);
+    animation-name: nav_animation;
+    animation-duration: 0.5s;
+    visibility: visible;
+    z-index: 999;
+
+    @media screen and (min-width: 1250px) {
+      display: none;
+    }
+
+    @keyframes nav_animation {
+      from {
+        left: 110%;
+      }
+
+      to {
+        left: calc(100% - 250px);
+      }
+    }
+
+    .close {
+      width: 35px;
+      margin: 0 0 8px 0;
+    }
+
+    h4 {
+      font-size: 31px;
+      font-weight: bold;
+      margin: 0 0 24px 0;
+    }
+
+    .mobile_nav {
+      list-style-type: none;
+      margin: auto;
+      gap: 16px;
+      height: 100vh;
+    }
+  }
+}
+
+// Main section
+main {
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    background: url(../images/main\ bg.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(80%);
+  }
+
+  section {
+    margin: 0 0 0 $horizontal_margin;
+
+    @media screen and (max-width: 1250px) {
+      margin: auto;
+      margin-top: 45vh;
+      padding-left: $horizontal_margin;
+      padding-right: $horizontal_margin;
+    }
+
+    h2 {
+      max-width: 564px;
+      margin: 0 0 16px 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 120%;
+
+      @media screen and (max-width: 600px) {
+        // font-size: 27px !important;
+        font-size: 30px !important;
+        margin: 0 0 16px 0;
+      }
+
+      @media screen and (max-width: 1250px) {
+        text-align: center;
+      }
+
+    }
+
+    .search {
+      height: 47px;
+      max-width: 431px;
+      border-radius: 15px;
+
+      @media screen and (max-width: 1250px) {
+        height: 40px;
+        margin: auto;
+      }
+
+      input {
+        background: #8b8b8b80;
+        width: 100%;
+        border-radius: 15px;
+        padding: 0 0 0 14px;
+
+        &::placeholder {
+          color: white;
+          font-size: 16px;
+          font-weight: 400;
+
+          @media screen and (max-width: 600px) {
+            font-size: 14px;
+          }
+        }
+      }
+
+      button {
+        background-color: $grey_darker;
+        max-width: 120px;
+        border-radius: 0 15px 15px 0;
+        padding: 14px 33px;
+
+        @media screen and (max-width: 1250px) {
+          padding: 10px 22px;
+
+        }
+
+        img {
+          width: 24px;
+        }
+      }
+    }
+  }
+}
+
+//Introduction
+.intro {
+  padding: $vertical_margin $horizontal_margin;
+
+  @media screen and (max-width: 1100px) {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 1.85%, rgba(0, 0, 0, 0.591667) 40.19%, rgba(0, 0, 0, 0.71) 100%), url(../images/Japan.jpg) center;
+    background-size: cover;
+    height: 588px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  article {
+    gap: 93px;
+
+    @media screen and (max-width: 1250px) {
+      // flex-direction: column;
+      gap: 50px;
+    }
+
+    aside {
+      width: 547px !important;
+      height: 366px;
+      border-radius: 15px;
+      box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+
+      @media screen and (max-width: 1100px) {
+        display: none;
+      }
+
+      img {
+        height: 100%;
+        border-radius: 15px;
+        width: auto;
+
+      }
+    }
+
+    .intro_description {
+
+      @media screen and (max-width: 1100px) {
+        max-width: 500px;
+      }
+
+      h3 {
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 120%;
+        margin: 0 0 8px 0;
+
+
+        @media screen and (max-width: 500px) {
+          // text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// Travel Destination
+.travel_destinations {
+  padding: $vertical_margin $horizontal_margin;
+
+  h3 {
+    margin: 0 0 56px 0;
+
+
+    @media screen and (max-width: 800px) {
+      margin: 0 0 8% 0;
+    }
+  }
+
+  article {
+    width: 100%;
+    padding: 1em;
+
+    .destination {
+      width: 269px;
+      margin: 0 15px;
+      height: 379px;
+      border-radius: 15px;
+      background-position: 0% !important;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 16px;
+      position: relative;
+      overflow: hidden;
+      z-index: 0;
+
+      &::after {
+        content: "";
+        background: $gradient;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        bottom: 0;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        width: 269px;
+        height: 379px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+      }
+
+      .description {
+        position: relative;
+        z-index: 5;
+      }
+
+      h4 {
+        margin: calc(100% - 16px) 0 8px 0;
+      }
+    }
+  }
+}
+
+.deals {
+  margin: $vertical_margin $horizontal_margin;
+
+  @media screen and (max-width: 950px) {
+    margin: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 9.02%, #FFFFFF 100%), url(../images/Butan\ hotel.jpg);
+    background-size: 100%;
+    height: 433px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: $vertical_margin $horizontal_margin;
+  }
+
+  article {
+    div {
+      gap: 16px;
+
+      @media screen and (max-width: 1000px) {
+        gap: 0px;
+      }
+
+      h4 {
+        max-width: 560px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        @media screen and (max-width: 950px) {
+          font-size: 24px;
+        }
+      }
+
+      p {
+        @media screen and (max-width: 950px) {
+          font-size: 16px;
+        }
+      }
+
+      button {
+        background-color: $grey_darker;
+        width: 141px;
+        height: 49px;
+        border-radius: 10px;
+
+        @media screen and (max-width: 950px) {
+          width: 97px;
+          height: 37px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    figure {
+      max-width: 568px;
+      max-height: 310px;
+      border-radius: 15px;
+      box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+
+      @media screen and (max-width: 950px) {
+        display: none;
+      }
+
+
+      img {
+        width: 100%;
+        border-radius: 15px;
+        max-height: 310px;
+      }
+    }
+  }
+}
+
+footer {
+  padding: $vertical_margin $horizontal_margin;
+  background-color: $grey_darker;
+  gap: calc((100% - 892px) / 2);
+
+  @media screen and (max-width: 1250px) {
+    gap: 100px;
+  }
+
+  @media screen and (max-width: 830px) {
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  @media screen and (max-width: 500px) {
+    gap: 32px;
+  }
+
+  .intro_contact {
+    max-width: 397px;
+
+    @media screen and (max-width: 830px) {
+      margin: auto;
+      max-width: 500px !important;
+    }
+
+    h4 {
+      font-size: 56px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+
+      @media screen and (max-width: 830px) {
+        text-align: center;
+      }
+
+      @media screen and (max-width: 600px) {
+        text-align: start;
+      }
+    }
+
+    p {
+      margin: 0 0 16px 0;
+
+      @media screen and (max-width: 600px) {
+        margin: 0 0 8px 0;
+      }
+    }
+
+    .input_button {
+      gap: 21px;
+      height: 39px;
+
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+        height: auto;
+        gap: 8px;
+      }
+
+      input {
+        background-color: transparent;
+        border: 2px solid white;
+        padding: 0 0 0 20px;
+
+        @media screen and (max-width: 600px) {
+          height: 40px;
+          flex-direction: column;
+        }
+
+        // @media screen and (max-width: 380px) {
+        //   height: 31px;
+        // }
+
+        &::placeholder {
+          font-size: 14px;
+
+          @media screen and (max-width: 600px) {
+            font-size: 12px;
+          }
+        }
+      }
+
+      button {
+        padding: 9.5px 19px;
+        border-radius: 10px;
+        background: $grey_light;
+
+        @media screen and (max-width: 600px) {
+          height: 40px;
+          font-size: 12px;
+        }
+
+        // @media screen and (max-width: 380px) {
+        //   height: 31px;
+        // }
+      }
+    }
+  }
+
+  .lists_social {
+    gap: 16px;
+
+    // @media screen and (max-width: 500px) {
+    //   gap: 24px;
+    // }
+
+    .lists {
+      @media screen and (max-width: 1020px) {
+        flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 32px;
+      }
+
+      .list {
+        h4 {
+          margin: 0 0 16px 0;
+        }
+
+        ul {
+          li {
+            color: $grey_light;
+          }
+        }
+      }
+    }
+
+    .social {
+      gap: 16px;
+    }
+  }
+}
