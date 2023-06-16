@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+}
+
+.height_100 {
+  height: 100vh;
+}
+
+.display_Medium {
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 120%;
+}
+
+.body_Medium {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.body_Small {
+  font-size: 12px;
+  font-weight: 400;
+}/*# sourceMappingURL=global.css.map */
